@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Casos de Éxito — Operum TI</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <img src="imagenes/Operum TI.png" alt="Operum TI" class="nav__logo-img" />
+        <span class="nav__logo-text">
+          <span class="nav__logo-name">Operum <em>TI</em></span>
+        </span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="index.html#inicio">Inicio</a></li>
+        <li><a href="index.html#clientes">Clientes</a></li>
+        <li><a href="index.html#mision">Nosotros</a></li>
+        <li><a href="index.html#especializacion">Especialización</a></li>
+        <li><a href="casos.html" class="nav__link--active">Casos</a></li>
+        <li><button class="nav__cta js-open-modal" style="cursor:pointer;border:none;font-family:inherit;">Hablemos</button></li>
+      </ul>
+      <button class="nav__hamburger" id="navHamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="nav__mobile" id="navMobile">
+    <button class="nav__mobile-close" id="navMobileClose" aria-label="Cerrar menú">
+      <i data-lucide="x"></i>
+    </button>
+    <ul class="nav__mobile-links">
+      <li><a href="index.html#inicio">Inicio</a></li>
+      <li><a href="index.html#clientes">Clientes</a></li>
+      <li><a href="index.html#mision">Nosotros</a></li>
+      <li><a href="index.html#especializacion">Especialización</a></li>
+      <li><a href="casos.html" class="nav__link--active">Casos</a></li>
+      <li><button class="nav__cta js-open-modal" style="cursor:pointer;border:none;font-family:inherit;">Hablemos</button></li>
+    </ul>
+  </div>
+
+  <!-- CASOS DE ÉXITO -->
+  <section class="cases cases--page">
+    <div class="cases__inner">
+
+      <div class="cases__header">
+        <span class="cases__tag">Casos de éxito</span>
+        <h2 class="cases__title">Proyectos que transformaron<br />operaciones reales</h2>
+        <p class="cases__sub">Soluciones construidas a medida para los desafíos de la industria.</p>
+      </div>
+
+      <div class="cases__grid">
+
+        <!-- CASO 1: Constructora DAG -->
+        <article class="case-card case-card--horizontal">
+
+          <!-- COLUMNA IZQUIERDA -->
+          <div class="case-card__left">
+            <div class="case-card__header">
+              <div class="case-card__client">
+                <span class="case-card__client-name">Constructora <strong>DAG</strong></span>
+                <span class="case-card__industry">Construcción</span>
+              </div>
+              <span class="case-card__badge">Plataforma de Operaciones Centralizadas</span>
+            </div>
+
+            <div class="case-card__body">
+              <p class="case-card__desc">
+                Plataforma integral que centraliza todo el ciclo operacional, desde la programación de obra
+                hasta la recepción final, conectando cada área en tiempo real.
+              </p>
+
+              <div class="case-card__modules">
+                <span class="case-card__modules-title">Módulos del sistema</span>
+                <ul class="case-card__module-list">
+                  <li><i data-lucide="calendar-check"></i> Programación y gestión de obra</li>
+                  <li><i data-lucide="users"></i> Gestión de subcontratos</li>
+                  <li><i data-lucide="package"></i> Control de materiales</li>
+                  <li><i data-lucide="trending-up"></i> Seguimiento de avances</li>
+                  <li><i data-lucide="shield-check"></i> Calidad y certificaciones</li>
+                  <li><i data-lucide="clipboard-check"></i> Recepción de obra</li>
+                </ul>
+              </div>
+
+              <div class="case-card__apps">
+                <div class="case-app">
+                  <div class="case-app__icon"><i data-lucide="monitor"></i></div>
+                  <div class="case-app__info">
+                    <span class="case-app__name">App Web</span>
+                    <span class="case-app__desc">Panel centralizado para oficina con visibilidad en tiempo real de todos los frentes de obra.</span>
+                  </div>
+                </div>
+                <div class="case-app">
+                  <div class="case-app__icon case-app__icon--mobile"><i data-lucide="smartphone"></i></div>
+                  <div class="case-app__info">
+                    <span class="case-app__name">App Móvil</span>
+                    <span class="case-app__desc">Terreno conectado con oficina. Registro de avances y gestión de calidad desde el campo.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- COLUMNA DERECHA: slider -->
+          <div class="case-card__right">
+            <span class="case-card__modules-title">Imágenes del proyecto</span>
+            <div class="case-slider" id="slider-dag">
+              <div class="case-slider__track" id="slider-dag-track">
+                <img src="imagenes/appdag.png"  alt="Vista 1" class="case-slider__img" onclick="openLightbox(this.src)" />
+                <img src="imagenes/appdag2.png" alt="Vista 2" class="case-slider__img" onclick="openLightbox(this.src)" />
+                <img src="imagenes/appdag3.png" alt="Vista 3" class="case-slider__img" onclick="openLightbox(this.src)" />
+              </div>
+              <button class="case-slider__btn case-slider__btn--prev" onclick="slideMove('slider-dag', -1)"><i data-lucide="chevron-left"></i></button>
+              <button class="case-slider__btn case-slider__btn--next" onclick="slideMove('slider-dag',  1)"><i data-lucide="chevron-right"></i></button>
+              <div class="case-slider__dots" id="slider-dag-dots">
+                <span class="case-slider__dot case-slider__dot--active" onclick="slideTo('slider-dag', 0)"></span>
+                <span class="case-slider__dot" onclick="slideTo('slider-dag', 1)"></span>
+                <span class="case-slider__dot" onclick="slideTo('slider-dag', 2)"></span>
+              </div>
+            </div>
+          </div>
+
+        </article>
+
+        <!-- LIGHTBOX -->
+        <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+          <button class="lightbox__close" onclick="closeLightbox()"><i data-lucide="x"></i></button>
+          <img class="lightbox__img" id="lightbox-img" src="" alt="Vista ampliada" />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="contact" id="contacto">
+    <div class="contact__footer">
+      <span class="contact__copy">© 2025 <strong>Operum TI</strong> — Todos los derechos reservados</span>
+    </div>
+  </footer>
+
+  <!-- MODAL CONTACTO -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <button class="modal__close" id="modalClose" aria-label="Cerrar"><i data-lucide="x"></i></button>
+      <div class="modal__header">
+        <span class="modal__tag">Hablemos</span>
+        <h3 class="modal__title">¿En qué podemos ayudarte?</h3>
+        <p class="modal__sub">Selecciona los servicios que te interesan y te contactamos a la brevedad.</p>
+      </div>
+      <form class="modal__form" id="modalForm">
+        <div class="modal__services">
+          <label class="service-check">
+            <input type="checkbox" name="servicio" value="Software a medida" />
+            <span class="service-check__box"><i data-lucide="code-2"></i></span>
+            <span class="service-check__label">Software a medida</span>
+          </label>
+          <label class="service-check">
+            <input type="checkbox" name="servicio" value="Sistemas de gestión y control" />
+            <span class="service-check__box"><i data-lucide="sliders"></i></span>
+            <span class="service-check__label">Sistemas de gestión y control</span>
+          </label>
+          <label class="service-check">
+            <input type="checkbox" name="servicio" value="Business Intelligence" />
+            <span class="service-check__box"><i data-lucide="bar-chart-2"></i></span>
+            <span class="service-check__label">Business Intelligence</span>
+          </label>
+          <label class="service-check">
+            <input type="checkbox" name="servicio" value="Inteligencia Artificial" />
+            <span class="service-check__box"><i data-lucide="cpu"></i></span>
+            <span class="service-check__label">Inteligencia Artificial</span>
+          </label>
+          <label class="service-check">
+            <input type="checkbox" name="servicio" value="IoT Industrial" />
+            <span class="service-check__box"><i data-lucide="radio"></i></span>
+            <span class="service-check__label">IoT Industrial</span>
+          </label>
+        </div>
+        <div class="modal__fields">
+          <div class="modal__field">
+            <label class="modal__label">Correo electrónico</label>
+            <input type="email" class="modal__input" name="email" placeholder="tu@correo.com" required />
+          </div>
+          <div class="modal__field">
+            <label class="modal__label">Teléfono</label>
+            <div class="modal__phone">
+              <span class="modal__phone-prefix">+569</span>
+              <input type="tel" class="modal__input modal__input--phone" name="telefono" placeholder="12345678" maxlength="8" required />
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="modal__submit">Enviar mensaje <i data-lucide="send"></i></button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>lucide.createIcons();</script>
+  <script>
+    // Lightbox
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('lightbox--open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('lightbox--open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    // Slider
+    const sliderState = {};
+
+    function slideTo(id, index) {
+      const track = document.getElementById(id + '-track');
+      const imgs = track.querySelectorAll('.case-slider__img');
+      const dots = document.querySelectorAll('#' + id + '-dots .case-slider__dot');
+      const total = imgs.length;
+      index = (index + total) % total;
+      sliderState[id] = index;
+      track.style.transform = 'translateX(-' + (index * 100) + '%)';
+      dots.forEach((d, i) => d.classList.toggle('case-slider__dot--active', i === index));
+    }
+
+    function slideMove(id, dir) {
+      slideTo(id, (sliderState[id] || 0) + dir);
+    }
+  </script>
+</body>
+</html>
